@@ -98,4 +98,13 @@ class Mailer < ActionMailer::Base
     mail(subject: defn[:subject],
          to: defn[:to])
   end
+
+  def alert_team_member(defn)
+    @body=defn[:body]
+    @team=defn[:body][:team]
+
+    mail(subject: defn[:subject],
+      to: defn[:to])
+
+  end
 end
